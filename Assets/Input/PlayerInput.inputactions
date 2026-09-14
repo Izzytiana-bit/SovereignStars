@@ -10,7 +10,7 @@
                     "name": "Move",
                     "type": "Value",
                     "id": "e22607ae-4cd7-41ac-aff2-9eb72b8864ec",
-                    "expectedControlType": "Vector2",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true,
@@ -30,7 +30,7 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "up",
+                    "name": "Up",
                     "id": "6fc8e6c5-b010-4934-acaf-c09d78e5aec5",
                     "path": "<Keyboard>/w",
                     "interactions": "",
@@ -41,7 +41,7 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "down",
+                    "name": "Down",
                     "id": "d4009c7e-f218-4f8b-909d-44b4c8269cdd",
                     "path": "<Keyboard>/s",
                     "interactions": "",
@@ -52,7 +52,7 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "left",
+                    "name": "Left",
                     "id": "b6cc3494-c18f-45a3-959b-48082edd8ec5",
                     "path": "<Keyboard>/a",
                     "interactions": "",
@@ -63,7 +63,7 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "right",
+                    "name": "Right",
                     "id": "1971f9eb-a8ce-46a1-8be6-ccaac05edc1b",
                     "path": "<Keyboard>/d",
                     "interactions": "",

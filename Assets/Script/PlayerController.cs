@@ -1,9 +1,11 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
     public float speed;
     public float groundDistance;
+    Vector2 moveAmount;
 
     public LayerMask terrainLayer;
     public Rigidbody rb;
@@ -15,13 +17,20 @@ public class PlayerController : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody>();
     }
 
+    public void OnMove(InputAction.CallbackContext context)
+    {
+        // read the value for the "move" action each event call
+        moveAmount = context.ReadValue<Vector2>();
+        Debug.Log("Move" + context);
+    }
+
     // Update is called once per frame
     void Update()
     {
         RaycastHit hit;
         Vector3 castPos = transform.position;
         castPos.y += 1;
-        if(Physics.Raycast(castPos, -transform.up, out hit, Mathf.Infinity, terrainLayer))
+        if (Physics.Raycast(castPos, -transform.up, out hit, Mathf.Infinity, terrainLayer))
         {
             if (hit.collider != null)
             {
