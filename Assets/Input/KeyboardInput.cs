@@ -6,6 +6,24 @@ namespace sovereignstars_movement
     {
         void Update()
         {
+            if (Input.GetKey(KeyCode.W))
+            {
+                VirtualInputManager.instance.MoveForward = true;
+            }
+            else
+            {
+                VirtualInputManager.instance.MoveForward = false;
+            }
+
+            if (Input.GetKey(KeyCode.S))
+            {
+                VirtualInputManager.instance.MoveBack = true;
+            }
+            else
+            {
+                VirtualInputManager.instance.MoveBack = false;
+            }
+
             if (Input.GetKey(KeyCode.D))
             {
                 VirtualInputManager.instance.MoveRight = true;

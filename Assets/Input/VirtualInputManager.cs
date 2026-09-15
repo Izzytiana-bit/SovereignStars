@@ -17,8 +17,10 @@ namespace sovereignstars_movement
                 Destroy(this.gameObject);
             }
         }
-        public bool MoveRight;
+        public bool MoveBack;
+        public bool MoveForward;
         public bool MoveLeft;
+        public bool MoveRight;
     }
 }
 
