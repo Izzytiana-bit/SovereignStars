@@ -3,8 +3,10 @@ using UnityEngine;
 
 namespace sovereignstars_testing
 {
-    public class TestingCube : MonoBehaviour
+    public class PlayerInputs : MonoBehaviour
     {
+        public int speed;
+
         void Update()
         {
             if (VirtualInputManager.instance.MoveForward && VirtualInputManager.instance.MoveBack || 
@@ -15,19 +17,19 @@ namespace sovereignstars_testing
 
             if (VirtualInputManager.instance.MoveBack)
             {
-                this.gameObject.transform.Translate(-Vector3.forward * 10f * Time.deltaTime);
+                this.gameObject.transform.Translate(-Vector3.forward * speed * Time.deltaTime);
             }
             if (VirtualInputManager.instance.MoveForward)
             {
-                this.gameObject.transform.Translate(Vector3.forward * 10f * Time.deltaTime);
+                this.gameObject.transform.Translate(Vector3.forward * speed * Time.deltaTime);
             }
             if (VirtualInputManager.instance.MoveRight)
             {
-                this.gameObject.transform.Translate(Vector3.right * 10f * Time.deltaTime);
+                this.gameObject.transform.Translate(Vector3.right * speed * Time.deltaTime);
             }
             if (VirtualInputManager.instance.MoveLeft)
             {
-                this.gameObject.transform.Translate(Vector3.left * 10f * Time.deltaTime);
+                this.gameObject.transform.Translate(Vector3.left * speed * Time.deltaTime);
             }
         }
     }

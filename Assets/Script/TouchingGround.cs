@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerController : MonoBehaviour
+public class TouchingGround : MonoBehaviour
 {
     public float speed;
     public float groundDistance;

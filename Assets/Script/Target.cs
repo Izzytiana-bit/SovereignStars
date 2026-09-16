@@ -2,15 +2,41 @@ using UnityEngine;
 
 public class Target : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+
+    [SerializeField] float health, maxHealth = 3f;
+
+    Rigidbody rb;
+    Transform target;
+
+    [SerializeField] FloatingHealthBar healthBar;
+
+    
+
+    private void Awake()
     {
-        
+        rb = GetComponent<Rigidbody>();
+        healthBar = GetComponentInChildren<FloatingHealthBar>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        health = maxHealth;
+        healthBar.UpdateHealthBar(health, maxHealth);
     }
+
+    public void TakeDamage(float damageAmount)
+    {
+        health -= damageAmount;
+        healthBar.UpdateHealthBar(health, maxHealth);
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        Destroy(gameObject);
+    }
+
 }
