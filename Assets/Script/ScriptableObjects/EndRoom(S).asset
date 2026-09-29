@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1217df793d2846d47a92fcfe956cca92, type: 3}
-  m_Name: StartingRoom
+  m_Name: EndRoom(S)
   m_EditorClassIdentifier: Assembly-CSharp::RoomSO
-  exits: 00000000
-  prefab: {fileID: 3690484811588363013, guid: ed15e23ca8cb55649b27cf6b835019f8, type: 3}
+  exits: 01000000
+  prefab: {fileID: 4211269087304579940, guid: 494a0f2de57986648a20cf1953ae786d, type: 3}

@@ -9,9 +9,11 @@ public class Dungeon : MonoBehaviour
     public int width;
     public int height;
     public RoomSO startingRoom;
+    public RoomSO[] endRooms;
+    public int minExitDistance;
     private int startingColumn;
     private int startingRow;
-    private Room[,] grid;
+    public Room[,] grid;
     public int RoomsToGenerate;
     public int minRooms;
     public RoomSO[] roomPrefabs;
@@ -20,6 +22,11 @@ public class Dungeon : MonoBehaviour
     public float roomWidth;
     public float roomHeight;
     public float roomVerticalOffset;
+
+    private int endColumn;
+    private int endRow;
+
+    private DungeonRequirements requirements;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -32,21 +39,26 @@ public class Dungeon : MonoBehaviour
 
         while (currentTotalRooms < minRooms)
         {
-            GenerateStartingRoom();
+            GenerateDungeon();
         }
         SpawnRooms();
     }
 
-    void GenerateStartingRoom()
+    void GenerateDungeon()
     {
         currentTotalRooms = 0;
         grid = new Room[width, height];
 
-        startingRow = 0;
-        startingColumn = Random.Range(0, width);
-        grid[startingColumn, startingRow] = new Room(startingRoom);
-        grid[startingColumn, startingRow].SetEntrance(Direction.South);
-        currentTotalRooms++;
+        GenerateStartingRoom();
+
+        ChooseEndPosition();
+
+        requirements = new DungeonRequirements(this, startingColumn, startingRow, endColumn, endRow);
+        requirements.FindRequiredPath();
+
+        GenerateEndRoom();
+
+
 
         foreach (Direction targetDir in grid[startingColumn, startingRow].GetOpenExits())
         {
@@ -66,6 +78,38 @@ public class Dungeon : MonoBehaviour
                     break;
             }
         }
+    }
+
+    void GenerateStartingRoom()
+    {
+        startingRow = 0;
+        startingColumn = Random.Range(0, width);
+        grid[startingColumn, startingRow] = new Room(startingRoom);
+        grid[startingColumn, startingRow].SetEntrance(Direction.South);
+        currentTotalRooms++;
+    }
+
+    void ChooseEndPosition()
+    {
+        endRow = startingRow;
+        endColumn = startingColumn;
+        while (Distance(startingColumn, startingRow, endColumn, endRow) < minExitDistance)
+        {
+            endColumn = Random.Range(0, width);
+            endRow = Random.Range(0, height);
+        }
+    }
+
+    void GenerateEndRoom()
+    {
+        RoomSO toSpawn = SelectRoom(endColumn, endRow, endRooms);
+        grid[endColumn, endRow] = new Room(toSpawn);
+        currentTotalRooms++;
+    }
+
+    int Distance(int startingColumn, int startingRow, int endColumn, int endRow)
+    {
+        return Mathf.Abs(endColumn - startingColumn) + Mathf.Abs(endRow - startingRow);
     }
 
     void SpawnRooms()
@@ -93,7 +137,7 @@ public class Dungeon : MonoBehaviour
             return;
         if (grid[column, row] != null)
             return;
-        RoomSO toSpawn = SelectRoom(column, row);
+        RoomSO toSpawn = SelectRoom(column, row, roomPrefabs);
         currentTotalRooms++;
         grid[column, row] = new Room(toSpawn);
         grid[column, row].SetEntrance(entrance);
@@ -117,26 +161,32 @@ public class Dungeon : MonoBehaviour
         }
     }
 
-    RoomSO SelectRoom(int column, int row)
+    RoomSO SelectRoom(int column, int row, RoomSO[] rooms)
     {
         bool found = false;
 
-        RoomSO room = roomPrefabs[Random.Range(0, roomPrefabs.Length)];
-
-        while (!found)
+        RoomSO room = rooms[Random.Range(0, rooms.Length)];
+        int attempts = 0;
+        while (!found && attempts < 1000)
         {
+            attempts++;
             if (DoRoomsMatch(room, column, row, Direction.North) &&
                 DoRoomsMatch(room, column, row, Direction.South) &&
                 DoRoomsMatch(room, column, row, Direction.East) &&
-                DoRoomsMatch(room, column, row, Direction.West))
+                DoRoomsMatch(room, column, row, Direction.West) && 
+                (requirements.grid[column, row] == null || requirements.grid[column, row].IsValid(room)))
             {
 
                 found = true;
             }
             else
             {
-                room = roomPrefabs[Random.Range(0, roomPrefabs.Length)];
+                room = rooms[Random.Range(0, rooms.Length)];
             }
+        }
+        if(attempts >= 1000)
+        {
+            Debug.LogError("Failed to find valid room for :" + column + ", " + row);
         }
 
         return room;
@@ -193,7 +243,7 @@ public class Dungeon : MonoBehaviour
         return false;
     }
 
-    Direction GetOppositeDirection(Direction direction)
+    public static Direction GetOppositeDirection(Direction direction)
     {
         switch (direction)
         {
@@ -209,7 +259,7 @@ public class Dungeon : MonoBehaviour
         }
     }
 
-    int GetRowInDirection(int row, Direction direction)
+    public static int GetRowInDirection(int row, Direction direction)
     {
         switch (direction)
         {
@@ -223,7 +273,7 @@ public class Dungeon : MonoBehaviour
         }
     }
 
-    int GetColumnInDirection(int column, Direction direction)
+    public static int GetColumnInDirection(int column, Direction direction)
     {
         switch (direction)
         {

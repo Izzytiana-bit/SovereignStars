@@ -497,6 +497,11 @@ MonoBehaviour:
   width: 5
   height: 4
   startingRoom: {fileID: 11400000, guid: 9a221075b86db60498fafff5c505dc1a, type: 2}
+  endRooms:
+  - {fileID: 11400000, guid: 9ac67f56e3b72414eae32aaaf1724487, type: 2}
+  - {fileID: 11400000, guid: 3d4fe92fefb3e9742ba6c840ee9410de, type: 2}
+  - {fileID: 11400000, guid: 2601f91a40dd0d146a23886df17d76a6, type: 2}
+  minExitDistance: 5
   RoomsToGenerate: 1000
   minRooms: 5
   roomPrefabs:
