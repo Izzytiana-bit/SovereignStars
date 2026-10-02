@@ -5,6 +5,8 @@ public class Projectile : MonoBehaviour
 
     [SerializeField] private float speed;
     [SerializeField] private float time;
+    public float damageAmount;
+    public Enemy enemy;
 
     private void Start()
     {
@@ -15,6 +17,15 @@ public class Projectile : MonoBehaviour
     void Update()
     {
         MoveProjectile();
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.CompareTag("Enemy"))
+        {
+            Debug.Log("taken Damage");
+            enemy.TakeDamage(damageAmount);
+        }
     }
 
     private void MoveProjectile()

@@ -49,6 +49,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
   speed: 5
   time: 3
+  damageAmount: 5
+  enemy: {fileID: 5276271879150537952, guid: 0f77e669b7832c043919b4af038f4500, type: 3}
 --- !u!54 &-3100367704286038691
 Rigidbody:
   m_ObjectHideFlags: 0
