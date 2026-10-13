@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7476362657658724771}
   - component: {fileID: 6069092859432318693}
-  - component: {fileID: -3100367704286038691}
   - component: {fileID: 5822798887756516484}
-  m_Layer: 0
+  - component: {fileID: 6675460384462441701}
+  - component: {fileID: -473752599391478304}
+  m_Layer: 8
   m_Name: Prefab_Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,7 +52,28 @@ MonoBehaviour:
   time: 3
   damageAmount: 5
   enemy: {fileID: 5276271879150537952, guid: 0f77e669b7832c043919b4af038f4500, type: 3}
---- !u!54 &-3100367704286038691
+--- !u!135 &5822798887756516484
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2708510592001290057}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.12422979
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &6675460384462441701
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -74,12 +96,12 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &5822798887756516484
-SphereCollider:
+--- !u!65 &-473752599391478304
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -93,12 +115,12 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.12422979
-  m_Center: {x: 0, y: 0.9552294, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3998850251824498987
 GameObject:
   m_ObjectHideFlags: 0
@@ -110,7 +132,7 @@ GameObject:
   - component: {fileID: 1775844353421244776}
   - component: {fileID: 1700390896126845195}
   - component: {fileID: 9110778729835990887}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}

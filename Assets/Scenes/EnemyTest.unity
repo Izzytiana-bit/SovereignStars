@@ -799,9 +799,25 @@ PrefabInstance:
       propertyPath: groundDistance
       value: 0.42
       objectReference: {fileID: 0}
+    - target: {fileID: 6342504866257119091, guid: adbeffd775b95ad43bf237120f047728, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6609545663903026209, guid: adbeffd775b95ad43bf237120f047728, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7960890139462983000, guid: adbeffd775b95ad43bf237120f047728, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7960890139462983000, guid: adbeffd775b95ad43bf237120f047728, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110885640057940310, guid: adbeffd775b95ad43bf237120f047728, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

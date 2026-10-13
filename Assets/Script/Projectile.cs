@@ -19,13 +19,16 @@ public class Projectile : MonoBehaviour
         MoveProjectile();
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
-        if (collision.collider.CompareTag("Enemy"))
+        Debug.Log("bonk");
+        if (collision.CompareTag("Enemy"))
         {
             Debug.Log("taken Damage");
+            enemy = collision.gameObject.GetComponent<Enemy>();
             enemy.TakeDamage(damageAmount);
         }
+        Destroy(gameObject);
     }
 
     private void MoveProjectile()
