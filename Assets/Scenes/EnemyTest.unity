@@ -797,11 +797,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6027936922822018622, guid: adbeffd775b95ad43bf237120f047728, type: 3}
       propertyPath: groundDistance
-      value: 0.42
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6342504866257119091, guid: adbeffd775b95ad43bf237120f047728, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6342504866257119091, guid: adbeffd775b95ad43bf237120f047728, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6609545663903026209, guid: adbeffd775b95ad43bf237120f047728, type: 3}
       propertyPath: m_Layer
