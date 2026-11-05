@@ -13,17 +13,6 @@ public class PlayerSpawner : MonoBehaviour
         SpawnPlayer();
     }
 
-    public void NotifyDeath()
-    {
-        StartCoroutine(RespawnRoutine());
-    }
-
-    private IEnumerator RespawnRoutine()
-    {
-        yield return new WaitForSeconds(respawnDelay);
-        SpawnPlayer();
-    }
-
     private void SpawnPlayer()
     {
         if (playerPrefab == null)

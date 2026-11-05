@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.Rendering.RenderGraphModule;
 using UnityEditor.ShaderGraph.Legacy;
+using Unity.VisualScripting;
 
 public class GridSystem : MonoBehaviour
 {
@@ -15,19 +16,27 @@ public class GridSystem : MonoBehaviour
     private GameObject ghostObject;
     private HashSet<Vector3> occupiedPositions = new HashSet<Vector3>();
 
+    public bool activated;
+
     private void Start()
     {
+        activated = false;
         CreateGhostObject();
     }
 
+
     private void Update()
     {
-        UpdateGhostPosition();
-
-        if (Input.GetMouseButtonDown(0))
+        if (activated == true)
         {
-            PlaceObject();
+            UpdateGhostPosition();
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                PlaceObject();
+            }
         }
+
     }
 
 

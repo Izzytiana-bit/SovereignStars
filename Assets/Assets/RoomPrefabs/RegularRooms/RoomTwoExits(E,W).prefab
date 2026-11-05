@@ -8,6 +8,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1364326465163880529, guid: 4f3aff45a8d0d854d8a038d3c3ed478f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 19.9998
+      objectReference: {fileID: 0}
+    - target: {fileID: 1364326465163880529, guid: 4f3aff45a8d0d854d8a038d3c3ed478f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4391858993371506169, guid: 4f3aff45a8d0d854d8a038d3c3ed478f, type: 3}
       propertyPath: m_Name
       value: RoomTwoExits(E,W)
@@ -23,6 +31,14 @@ PrefabInstance:
     - target: {fileID: 5005372289474900402, guid: 4f3aff45a8d0d854d8a038d3c3ed478f, type: 3}
       propertyPath: 'exits.Array.data[1]'
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5721667711183374011, guid: 4f3aff45a8d0d854d8a038d3c3ed478f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 19.9998
+      objectReference: {fileID: 0}
+    - target: {fileID: 5721667711183374011, guid: 4f3aff45a8d0d854d8a038d3c3ed478f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8456400134890229060, guid: 4f3aff45a8d0d854d8a038d3c3ed478f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -68,6 +84,8 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 7223240654915956270, guid: 4f3aff45a8d0d854d8a038d3c3ed478f, type: 3}
     - {fileID: 4775703509875211286, guid: 4f3aff45a8d0d854d8a038d3c3ed478f, type: 3}
+    - {fileID: 5763542079315269146, guid: 4f3aff45a8d0d854d8a038d3c3ed478f, type: 3}
+    - {fileID: 6032998953535168827, guid: 4f3aff45a8d0d854d8a038d3c3ed478f, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f3aff45a8d0d854d8a038d3c3ed478f, type: 3}
