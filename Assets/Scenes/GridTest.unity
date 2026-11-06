@@ -130,10 +130,11 @@ GameObject:
   - component: {fileID: 286896618}
   - component: {fileID: 286896617}
   - component: {fileID: 286896616}
+  - component: {fileID: 286896619}
   - component: {fileID: 286896615}
   - component: {fileID: 286896614}
   m_Layer: 0
-  m_Name: Sphere (2)
+  m_Name: LoadDungeonTest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -259,6 +260,48 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &286896619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286896613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9783bcd2fec527848ba7c7976b8e76ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TriggerDetectPlay
+  onPlayerDectect:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1677221553}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  onPlayerGone:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1677221553}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,10 +561,11 @@ GameObject:
   - component: {fileID: 530238013}
   - component: {fileID: 530238012}
   - component: {fileID: 530238011}
+  - component: {fileID: 530238014}
   - component: {fileID: 530238010}
   - component: {fileID: 530238009}
   m_Layer: 0
-  m_Name: Sphere (1)
+  m_Name: LoadEnemyTest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -635,6 +679,48 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &530238014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530238008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9783bcd2fec527848ba7c7976b8e76ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TriggerDetectPlay
+  onPlayerDectect:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1677221553}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onPlayerGone:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1677221553}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -702,7 +788,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1212851576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1071,7 +1157,7 @@ GameObject:
   - component: {fileID: 1729636588}
   - component: {fileID: 1729636587}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: GridUpdate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1183,6 +1269,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TriggerDetectPlay
   onPlayerDectect:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1677221553}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  onPlayerGone:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1677221553}
@@ -1321,11 +1422,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4348262878219077284, guid: 01f36e0240a960248b9e7a2394308268, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.40862
+      value: 0.40863037
       objectReference: {fileID: 0}
     - target: {fileID: 4348262878219077284, guid: 01f36e0240a960248b9e7a2394308268, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.72088
+      value: 0.72088623
       objectReference: {fileID: 0}
     - target: {fileID: 4348262878219077284, guid: 01f36e0240a960248b9e7a2394308268, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1337,15 +1438,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4348262878219077284, guid: 01f36e0240a960248b9e7a2394308268, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4348262878219077284, guid: 01f36e0240a960248b9e7a2394308268, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4348262878219077284, guid: 01f36e0240a960248b9e7a2394308268, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4348262878219077284, guid: 01f36e0240a960248b9e7a2394308268, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1578,6 +1679,10 @@ PrefabInstance:
     - target: {fileID: 757220320097489274, guid: adbeffd775b95ad43bf237120f047728, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 803354901313732566, guid: adbeffd775b95ad43bf237120f047728, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2582075764883693519, guid: adbeffd775b95ad43bf237120f047728, type: 3}
       propertyPath: m_SortingOrder
