@@ -26,7 +26,7 @@ public class PlayerSpawner : MonoBehaviour
         Player playerHealth = newPlayer.GetComponent<Player>();
         if (playerHealth != null)
         {
-            playerHealth.Initialize(this);
+            //playerHealth.Initialize(this);
         }
     }
 }

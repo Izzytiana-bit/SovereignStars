@@ -51,7 +51,7 @@ public class Enemy : MonoBehaviour
     {
         if (spawner != null)
         {
-            spawner.NotifyDeath();
+            //spawner.NotifyDeath();
         }
 
         Destroy(gameObject);

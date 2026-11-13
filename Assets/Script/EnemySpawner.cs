@@ -1,11 +1,10 @@
-using System.Collections;
-using Unity.VisualScripting;
+
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] private GameObject enemyPrefab;
-    [SerializeField] private float respawnDelay = 3.0f; 
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
@@ -13,16 +12,6 @@ public class EnemySpawner : MonoBehaviour
         SpawnEnemy();
     }
 
-    public void NotifyDeath()
-    {
-        StartCoroutine(RespawnRoutine());
-    }
-
-    private IEnumerator RespawnRoutine()
-    {
-        yield return new WaitForSeconds(respawnDelay);
-        SpawnEnemy();
-    }
 
     private void SpawnEnemy()
     {

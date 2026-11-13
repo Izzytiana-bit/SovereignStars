@@ -1,8 +1,5 @@
 using UnityEngine;
 using System.Collections.Generic;
-using UnityEngine.Rendering.RenderGraphModule;
-using UnityEditor.ShaderGraph.Legacy;
-using Unity.VisualScripting;
 
 public class GridSystem : MonoBehaviour
 {
@@ -20,7 +17,6 @@ public class GridSystem : MonoBehaviour
 
     private void Start()
     {
-        activated = false;
         CreateGhostObject();
     }
 

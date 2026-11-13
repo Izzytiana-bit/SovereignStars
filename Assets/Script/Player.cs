@@ -42,7 +42,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void Initialize(PlayerSpawner spawnerRef)
+    public void Initialise(PlayerSpawner spawnerRef)
     {
         //spawner = spawnerRef;
     }
@@ -51,7 +51,7 @@ public class Player : MonoBehaviour
     {
         if (spawner != null)
         {
-            spawner.NotifyDeath();
+            
         }
 
         Destroy(gameObject);
