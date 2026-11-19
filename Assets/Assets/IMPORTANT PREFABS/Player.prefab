@@ -150,6 +150,7 @@ GameObject:
   - component: {fileID: 4379710392838959800}
   - component: {fileID: 6027936922822018622}
   - component: {fileID: 2835716356119383585}
+  - component: {fileID: 7750332822540318506}
   - component: {fileID: 382561705025811001}
   - component: {fileID: 8105913987221292603}
   m_Layer: 6
@@ -235,6 +236,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TestingCube
   speed: 5
+--- !u!114 &7750332822540318506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7960890139462983000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 641d373498f17d94795124ef0b79ceed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerInteractor
+  radius: 2
+  interactableLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!136 &382561705025811001
 CapsuleCollider:
   m_ObjectHideFlags: 0
