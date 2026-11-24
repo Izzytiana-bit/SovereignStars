@@ -6,19 +6,12 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private GameObject enemyPrefab;
 
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    private void Start()
-    {
-        SpawnEnemy();
-    }
-
-
-    private void SpawnEnemy()
+    public GameObject SpawnEnemy()
     {
         if (enemyPrefab == null)
         {
-            Debug.LogError("Please assing an Enemy Prefab to Spawner");
-            return;
+            Debug.LogError("Please assign an Enemy Prefab to Spawner");
+            return null;
         }
 
         GameObject newEnemy = Instantiate(enemyPrefab, transform.position, transform.rotation);
@@ -28,5 +21,7 @@ public class EnemySpawner : MonoBehaviour
         {
             enemyHealth.Initialize(this);
         }
+
+        return newEnemy;
     }
 }
