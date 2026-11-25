@@ -8,13 +8,10 @@ public class RoomEnterAction : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && !hasEntered)
         {
-            if (!hasEntered)
-            {
-                hasEntered = true;
-                OnRoomEntered.Invoke();
-            }
+            hasEntered = true;
+            OnRoomEntered.Invoke();
         }
     }
 }
