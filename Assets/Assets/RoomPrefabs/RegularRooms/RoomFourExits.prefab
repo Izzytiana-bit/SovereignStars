@@ -630,7 +630,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 10, y: 0, z: 5}
-  m_LocalScale: {x: 0.86699, y: 2, z: 0.8942278}
+  m_LocalScale: {x: 0.86699, y: 2, z: 0.64423716}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8456400134890229060}
@@ -779,6 +779,7 @@ MonoBehaviour:
   spawners:
   - {fileID: 9165613573315045655}
   - {fileID: 4294220885536497809}
+  enemies: []
   onRoomCleared:
     m_PersistentCalls:
       m_Calls:
@@ -1784,6 +1785,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7462255819151777588, guid: d693afcf5409fb140998447fe9310fb2, type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 320542972494023403}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1857,6 +1862,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7462255819151777588, guid: d693afcf5409fb140998447fe9310fb2, type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 320542972494023403}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -51,10 +51,13 @@ public class Enemy : MonoBehaviour
     {
         if (spawner != null)
         {
+            Debug.Log("Dead");
+            spawner.RemoveEnemy(gameObject);
+            //Destroy(gameObject);
             //spawner.NotifyDeath();
         }
 
-        Destroy(gameObject);
+ 
     }
 
     internal void TakeDamage()

@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 169107526601963633}
   serializedVersion: 2
   m_LocalRotation: {x: 0.38268343, y: -0, z: -0, w: 0.92387956}
-  m_LocalPosition: {x: -0.41643998, y: 3.58, z: -2.606419}
+  m_LocalPosition: {x: 0, y: 3, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -229,8 +229,8 @@ GameObject:
   - component: {fileID: 4750021963704806645}
   - component: {fileID: 2199910905598872146}
   - component: {fileID: 4320593224734301482}
-  - component: {fileID: 6350577101761683830}
   - component: {fileID: 4105462653989569712}
+  - component: {fileID: 2921815791460056753}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -247,7 +247,7 @@ Transform:
   m_GameObject: {fileID: 5819785184079727038}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.41643998, y: 0.58, z: -0.6064191}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -314,8 +314,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TestingCube
   speed: 5
---- !u!136 &6350577101761683830
-CapsuleCollider:
+--- !u!114 &4105462653989569712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5819785184079727038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 546e1fee86d001d4ca6b45f54bf34a7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ProjectileSpawner
+  projectilePrefab: {fileID: 6069092859432318693, guid: 7564a8a6a35544f4086bff8cd0e6b32f, type: 3}
+  aimTransform: {fileID: 9064727308091495913}
+  FireKeyCode: 32
+--- !u!65 &2921815791460056753
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -332,26 +347,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.28705412
-  m_Height: 1.2800668
-  m_Direction: 1
-  m_Center: {x: 0.016261637, y: -0.14003342, z: 0}
---- !u!114 &4105462653989569712
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5819785184079727038}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 546e1fee86d001d4ca6b45f54bf34a7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ProjectileSpawner
-  projectilePrefab: {fileID: 6069092859432318693, guid: 7564a8a6a35544f4086bff8cd0e6b32f, type: 3}
-  aimTransform: {fileID: 9064727308091495913}
-  FireKeyCode: 32
+  serializedVersion: 3
+  m_Size: {x: 0.5351996, y: 1, z: 0.75799894}
+  m_Center: {x: -0.029813737, y: 0, z: -0.10624313}
 --- !u!1 &6410891571215288067
 GameObject:
   m_ObjectHideFlags: 0
@@ -377,7 +375,7 @@ Transform:
   m_GameObject: {fileID: 6410891571215288067}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.67799, y: -0, z: 3.97547}
+  m_LocalPosition: {x: 0, y: -0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -413,7 +411,7 @@ Transform:
   m_GameObject: {fileID: 7266234709100220265}
   serializedVersion: 2
   m_LocalRotation: {x: 0.38268343, y: -0, z: -0, w: 0.92387956}
-  m_LocalPosition: {x: -0.41643998, y: 3.58, z: -2.606419}
+  m_LocalPosition: {x: 0, y: 3, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

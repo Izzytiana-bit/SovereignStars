@@ -4,7 +4,7 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] private GameObject enemyPrefab;
-
+    public RoomSpawnManager manager;
 
     public GameObject SpawnEnemy()
     {
@@ -24,4 +24,16 @@ public class EnemySpawner : MonoBehaviour
 
         return newEnemy;
     }
+
+
+    public void RemoveEnemy(GameObject enemy)
+    {
+        Debug.Log("remove enemy");
+        manager.RemoveEnemyFromList();
+        Destroy(enemy);
+    }
+
+
+
+
 }
